@@ -1,0 +1,17 @@
+.character-modal-card-placeholder, .character-modal-card {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.character-modal-card {
+    margin-top: 5%;
+    margin-left: -5%;
+    position: absolute;
+}
+
+.character-modal-data-grid {
+    gap: 63px;
+    padding: 72px;
+}

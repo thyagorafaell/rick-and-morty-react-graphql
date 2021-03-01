@@ -1,0 +1,34 @@
+.header .logo, .header .search-box {
+    margin: 38px;
+}
+
+.search-box .form-item:not(:nth-child(1)) {
+    margin-left: 16px;
+}
+
+.form-item {
+    background: transparent;
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 17px;
+}
+
+.form-item:focus {
+    outline: transparent;
+}
+
+.form-item::placeholder {
+    color: #9F9F9F;
+}
+
+.form-button:focus {
+    outline: transparent;
+    box-shadow: 0 -3px 4px rgba(255, 255, 255, 0.25) inset;
+}
+
+.form-input-search {
+    width: 196px;
+}

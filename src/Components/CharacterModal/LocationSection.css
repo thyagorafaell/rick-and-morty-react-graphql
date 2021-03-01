@@ -1,0 +1,25 @@
+.location-section-dimension {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.location-section-name {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.location-section-residents, .location-section-type {
+    color: var(--light-gray);
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.location-section-residents {
+    margin-top: 12px;
+}
+
+.location-section-residents img {
+    display: inline;
+    margin-top: -2px;
+    margin-right: 11px;
+}
