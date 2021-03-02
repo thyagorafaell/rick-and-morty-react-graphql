@@ -1,12 +1,13 @@
 import React, { memo } from 'react';
-import Card from '../Card/Card'
+import Card from '../Generic/Card/Card'
+import { STATUS_DEAD } from '../../constants/apiData';
 
 /* todo: status unknown */
 function CharacterCard({ image, name, onClick, species, status }) {
     return (
         <div onClick={onClick} className={'cursor-pointer'}>
             <Card
-                disabled={status === 'Dead'}
+                disabled={status === STATUS_DEAD}
                 image={image}
                 title={name}
                 subtitle={species}

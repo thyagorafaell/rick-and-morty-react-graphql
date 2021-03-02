@@ -26,6 +26,6 @@ function Card({ className = '', disabled, image, title, subtitle, width, height 
     );
 }
 
-Card.displayName = 'Components/Card/Card';
+Card.displayName = 'Components/Generic/Card/Card';
 
 export default memo(Card);

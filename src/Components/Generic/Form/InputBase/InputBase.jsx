@@ -8,4 +8,4 @@ export default function InputBase(props) {
     return <input {...props} className={`form-item form-input ${props.className}`} onChange={onChange} />;
 }
 
-InputBase.displayName = 'Components/Form/InputBase/InputBase';
+InputBase.displayName = 'Components/Generic/Form/InputBase/InputBase';

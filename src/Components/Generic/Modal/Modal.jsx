@@ -19,4 +19,4 @@ export default function Modal({ children, onClose }) {
     return createPortal(modal, document.body);
 }
 
-Modal.displayName = 'Components/Modal/Modal';
+Modal.displayName = 'Components/Generic/Modal/Modal';

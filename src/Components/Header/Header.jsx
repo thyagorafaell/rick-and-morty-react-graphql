@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../images/logo.png';
-import SearchBox from '../SearchBox/SearchBox';
+import SearchBox from '../Generic/SearchBox/SearchBox';
 import './Header.css';
 
 export default function Header({ onSearch }) {

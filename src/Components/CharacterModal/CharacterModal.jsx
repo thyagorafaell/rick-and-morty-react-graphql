@@ -1,8 +1,8 @@
 import { useQuery } from '@apollo/react-hooks';
-import React, { Fragment, memo, useEffect, useRef, useState } from 'react';
+import React, { Fragment, memo } from 'react';
 import CharacterModalCard from './CharacterModalCard';
-import Modal from '../Modal/Modal';
-import Section from '../Section/Section';
+import Modal from '../Generic/Modal/Modal';
+import Section from '../Generic/Section/Section';
 import AboutSection from './AboutSection';
 import LocationSection from './LocationSection';
 import { CHARACTER } from '../../constants/queries';
@@ -14,9 +14,6 @@ const placeholderStyle = {
 };
 
 function CharacterModal({ card, onClose }) {
-    const placeholderRef = useRef();
-    const cardRef = useRef();
-
     const placeholderComputedStyle = {
         ...placeholderStyle,
         backgroundImage: `url(${card.image})`
@@ -33,7 +30,7 @@ function CharacterModal({ card, onClose }) {
             <div className={'grid grid-cols-5 h-full'}>
                 <Fragment>
                     <div className={'grid grid-cols-1 col-span-2'}>
-                        <div className={'character-modal-card-placeholder w-full h-full bg-center bg-cover'} style={placeholderComputedStyle} ref={placeholderRef}></div>
+                        <div className={'character-modal-card-placeholder w-full h-full bg-center bg-cover'} style={placeholderComputedStyle}></div>
                         <CharacterModalCard {...card} />
                     </div>
                     <div className={'character-modal-data-grid grid grid-cols-1 col-span-3 bg-black overflow-auto text-white z-10'}>
