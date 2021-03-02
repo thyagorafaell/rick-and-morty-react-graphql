@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import Section from '../Generic/Section/Section';
 import { UNKNOWN, GENDER_FEMALE, GENDER_GENDERLESS, GENDER_MALE, STATUS_ALIVE, STATUS_DEAD } from '../../constants/apiData';
+import './AboutSection.css';
 
 function getGenderPronoum(gender) {
     let pronoum = 'He/She';
@@ -57,10 +58,13 @@ function getAboutText({ name, gender, species, status, episode }) {
     return `${presentationText} ${statusText} ${lastSeenText}`;
 }
 
-function AboutSection({ data }) {
+function AboutSection({ data, image }) {
     return (
         <Section title={'About'}>
-            <p>{getAboutText(data)}</p>
+            <div className={'flex items-center'}>
+                <img className={'about-section-image md:hidden'} src={image} />
+                <p>{getAboutText(data)}</p>
+            </div>
         </Section>
     );
 };

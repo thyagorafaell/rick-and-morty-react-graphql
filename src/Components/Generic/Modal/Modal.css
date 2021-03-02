@@ -19,6 +19,8 @@
 }
 
 .modal-content .sm-close-button {
-    margin-top: 15px;
-    right: 15px;
+    background-color: var(--black);
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }

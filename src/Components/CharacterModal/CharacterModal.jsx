@@ -36,7 +36,7 @@ function CharacterModal({ card, onClose }) {
                     <div className={'character-modal-data-grid grid grid-cols-1 bg-black overflow-auto text-white z-10 col-span-5 md:col-span-3'}>
                         { data && (
                             <Fragment>
-                                <AboutSection data={data.character} />
+                                <AboutSection data={data.character} image={card.image} />
                                 <LocationSection title={'Origin'} data={data.character.origin} />
                                 <LocationSection title={'Location'} data={data.character.location} />
                             </Fragment>
