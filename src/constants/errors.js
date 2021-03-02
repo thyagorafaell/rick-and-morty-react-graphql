@@ -1,1 +1,0 @@
-export const CHARACTERS_NOT_FOUND_ERROR = 'GraphQL error: 404: Not Found';
