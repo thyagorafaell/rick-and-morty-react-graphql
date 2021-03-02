@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PageItem from './PageItem';
 import './Pagination.css';
 
 function getPages(pages, currentPage) {
@@ -10,14 +11,6 @@ function getPages(pages, currentPage) {
     start = Math.min(start, minPage + pages - length);
    
     return Array.from({ length }, (_value, i) => start + i);
-}
-
-function PageItem({ disabled, item, text, current, onChange }) {
-    const className = 'pagination-item' + (current ? ' pagination-item__current' : '') + (disabled ? ' pagination-item__disabled' : '');
-    const itemText = text || item;
-    const onClick = !disabled ? () => onChange(item) : null;
-
-    return <span className={className} onClick={onClick}>{itemText}</span>;
 }
 
 function Pagination({ next, onChange, page, pages, prev }) {
@@ -34,6 +27,6 @@ function Pagination({ next, onChange, page, pages, prev }) {
     );
 }
 
-Pagination.displayName = 'Components/Pagination/Pagination';
+Pagination.displayName = 'Components/Generic/Pagination/Pagination';
 
 export default memo(Pagination);
