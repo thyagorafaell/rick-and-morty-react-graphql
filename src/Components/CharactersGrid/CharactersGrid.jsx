@@ -11,7 +11,7 @@ export default function CharactersGrid(props) {
     const modal = modalData && <CharacterModal onClose={closeModal} card={modalData} />
 
     return (
-        <div className={'card-grid grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'}>
+        <div className={'card-grid grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}>
             { modal }
             { cards }
         </div>
