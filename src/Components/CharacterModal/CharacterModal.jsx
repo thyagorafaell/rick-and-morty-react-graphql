@@ -36,7 +36,7 @@ function CharacterModal({ card, onClose }) {
                         <div className={'character-modal-card-placeholder w-full h-full bg-center bg-cover'} style={placeholderComputedStyle} ref={placeholderRef}></div>
                         <CharacterModalCard {...card} />
                     </div>
-                    <div className={'character-modal-data-grid grid grid-cols-1 col-span-3 bg-black text-white z-10'}>
+                    <div className={'character-modal-data-grid grid grid-cols-1 col-span-3 bg-black overflow-auto text-white z-10'}>
                         { data && (
                             <Fragment>
                                 <AboutSection data={data.character} />
