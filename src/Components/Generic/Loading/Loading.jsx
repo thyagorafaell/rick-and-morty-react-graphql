@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 import React from 'react';
 import Card from '../Card/Card';
-import defaultCard from '../../images/default-card.png';
+import defaultCard from '../../../images/default-card.png';
 
 export default function Loading() {
     const loading = (

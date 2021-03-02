@@ -1,8 +1,8 @@
 import { useQuery } from '@apollo/react-hooks';
 import React, { Fragment, memo, useEffect, useRef, useState } from 'react';
 import CharacterModalCard from './CharacterModalCard';
-import Modal from '../Modal/Modal';
-import Section from '../Section/Section';
+import Modal from '../Generic/Modal/Modal';
+import Section from '../Generic/Section/Section';
 import AboutSection from './AboutSection';
 import LocationSection from './LocationSection';
 import { CHARACTER } from '../../constants/queries';

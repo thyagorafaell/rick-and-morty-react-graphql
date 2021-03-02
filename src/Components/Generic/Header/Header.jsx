@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/logo.png';
+import logo from '../../../images/logo.png';
 import SearchBox from '../SearchBox/SearchBox';
 import './Header.css';
 

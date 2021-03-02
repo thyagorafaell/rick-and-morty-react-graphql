@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import Section from '../Section/Section';
+import Section from '../Generic/Section/Section';
 
 function getGenderPronoum(gender) {
     let pronoum = 'He/She';

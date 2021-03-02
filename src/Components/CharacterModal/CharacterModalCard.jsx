@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import Card from '../Card/Card'
+import Card from '../Generic/Card/Card'
 
 function CharacterModalCard({ image, name, species, status }) {
     return (
