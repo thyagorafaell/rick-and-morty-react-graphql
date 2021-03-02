@@ -10,8 +10,8 @@ function CharacterModalCard({ image, name, species, status }) {
                 image={image}
                 title={name}
                 subtitle={species}
-                width={'40vh'}
-                height={'50vh'}
+                width={'50vh'}
+                height={'60vh'}
             />
         </div>
     );
