@@ -12,6 +12,6 @@ function Section({ children, title }) {
     )
 }
 
-Section.displayName = 'Components/Section/Section';
+Section.displayName = 'Components/Generic/Section/Section';
 
 export default memo(Section);

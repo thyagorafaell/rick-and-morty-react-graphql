@@ -5,4 +5,4 @@ export default function Search(props) {
     return <InputBase {...props} className={`form-input-search ${props.className}`} type={'search'} />;
 }
 
-Search.displayName = 'Components/Form/Search/Search';
+Search.displayName = 'Components/Generic/Form/Search/Search';

@@ -21,4 +21,4 @@ export default function SearchBox({ className, onSearch }) {
     );
 }
 
-SearchBox.displayName = 'Components/SearchBox/SearchBox';
+SearchBox.displayName = 'Components/Generic/SearchBox/SearchBox';

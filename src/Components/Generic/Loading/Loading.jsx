@@ -16,4 +16,4 @@ export default function Loading() {
     return createPortal(loading, document.body);
 };
 
-Loading.displayName = 'Components/Loading/Loading';
+Loading.displayName = 'Components/Generic/Loading/Loading';
