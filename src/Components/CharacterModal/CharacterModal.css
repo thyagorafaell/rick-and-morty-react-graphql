@@ -6,12 +6,12 @@
 }
 
 .character-modal-card {
-    margin-top: 5%;
-    margin-left: -5%;
+    top: calc(0% + 25vh);
+    margin-left: -60px;
     position: absolute;
 }
 
 .character-modal-data-grid {
-    gap: 63px;
-    padding: 72px;
+    gap: 2em;
+    padding: 3em 4em;
 }
