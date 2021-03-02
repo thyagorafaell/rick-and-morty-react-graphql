@@ -9,8 +9,9 @@ export default function Modal({ children, onClose }) {
 
     const modal = (
         <div className={'modal fixed inset-0 z-50 flex items-center justify-center'} onClick={onBackdropClick} ref={backdrop}>
-            <div className={'modal-content overflow-hidden flex flex-col'}>
-                { <Button className={'fixed z-10'} onClick={onClose}>{'Close'}</Button> }
+            <div className={'modal-content relative flex flex-col'}>
+                { <Button className={'absolute z-50 hidden md:block full-close-button'} onClick={onClose}>{'Close'}</Button> }
+                { <Button className={'absolute z-50 md:hidden sm-close-button'} onClick={onClose}>{'x'}</Button> }
                 { children }
             </div>
         </div>

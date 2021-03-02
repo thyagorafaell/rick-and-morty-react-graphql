@@ -29,11 +29,11 @@ function CharacterModal({ card, onClose }) {
         <Modal onClose={onClose}>
             <div className={'grid grid-cols-5 h-full'}>
                 <Fragment>
-                    <div className={'grid grid-cols-1 col-span-2'}>
+                    <div className={'grid hidden md:grid grid-cols-1 col-span-2'}>
                         <div className={'character-modal-card-placeholder w-full h-full bg-center bg-cover'} style={placeholderComputedStyle}></div>
                         <CharacterModalCard {...card} />
                     </div>
-                    <div className={'character-modal-data-grid grid grid-cols-1 col-span-3 bg-black overflow-auto text-white z-10'}>
+                    <div className={'character-modal-data-grid grid grid-cols-1 bg-black overflow-auto text-white z-10 col-span-5 md:col-span-3'}>
                         { data && (
                             <Fragment>
                                 <AboutSection data={data.character} />
