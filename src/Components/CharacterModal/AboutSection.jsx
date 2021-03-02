@@ -1,20 +1,21 @@
 import React, { memo } from 'react';
 import Section from '../Generic/Section/Section';
+import { UNKNOWN, GENDER_FEMALE, GENDER_GENDERLESS, GENDER_MALE, STATUS_ALIVE, STATUS_DEAD } from '../../constants/apiData';
 
 function getGenderPronoum(gender) {
     let pronoum = 'He/She';
 
     switch (gender) {
-        case 'Male':
+        case GENDER_MALE:
             pronoum = 'He';
             break;
-        case 'Female':
+        case GENDER_FEMALE:
             pronoum = 'She';
             break;
-        case 'Genderless':
+        case GENDER_GENDERLESS:
             pronoum = 'It';
             break;
-        case 'unknown':
+        case UNKNOWN:
         default:
             break;
     }
@@ -23,8 +24,8 @@ function getGenderPronoum(gender) {
 }
 
 function getPresentationText(name, status, gender, species) {
-    const statusPronoum = status === 'Dead' ? 'was' : 'is';
-    const genderText = gender === 'unknown' || gender === 'Genderless' ? '' : gender.toLowerCase();
+    const statusPronoum = status === STATUS_DEAD ? 'was' : 'is';
+    const genderText = gender === UNKNOWN || gender === GENDER_GENDERLESS ? '' : gender.toLowerCase();
     const speciesText = species.toLowerCase();
 
     return `${name} ${statusPronoum} a ${genderText} ${speciesText}.`;
@@ -33,10 +34,10 @@ function getPresentationText(name, status, gender, species) {
 function getStatusText(status, gender) {
     const genderPronoum = getGenderPronoum(gender);
 
-    if (status === 'unknown')
+    if (status === UNKNOWN)
         return `It can't be told if ${genderPronoum.toLowerCase()} is alive or dead. `;
     
-    if (status === 'Alive')
+    if (status === STATUS_ALIVE)
         return `${genderPronoum} is alive and well. `;
 
     return `${genderPronoum} is ${status.toLowerCase()}. `;

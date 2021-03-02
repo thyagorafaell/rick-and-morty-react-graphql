@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../Components/Generic/Header/Header';
+import Header from '../Components/Header/Header';
 import AppPresentation from './AppPresentation';
 
 export default function AppData() {

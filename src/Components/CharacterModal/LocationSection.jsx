@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import Section from '../Generic/Section/Section';
 import People from '../../images/people.png';
+import { UNKNOWN } from '../../constants/apiData';
 import './LocationSection.css';
 
 const empytValues = {
@@ -13,9 +14,9 @@ function getLocationData(data) {
     const { dimension, name, residents, type } = data;
 
     return {
-        dimension: dimension === 'unknown' || dimension === null ? empytValues.dimension : dimension,
-        name: name === 'unknown' || name === null ? empytValues.name : name,
-        type: type === 'unknown' || type === null ? empytValues.type : type,
+        dimension: dimension === UNKNOWN || dimension === null ? empytValues.dimension : dimension,
+        name: name === UNKNOWN || name === null ? empytValues.name : name,
+        type: type === UNKNOWN || type === null ? empytValues.type : type,
         residents
     };
 }
