@@ -1,5 +1,6 @@
 {
   "name": "ricky-and-morty-characters-list-react",
+  "homepage": "https://thyagorafaell.github.io/ricky-and-morty-react-graphql/",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
