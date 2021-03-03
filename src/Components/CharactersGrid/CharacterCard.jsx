@@ -1,11 +1,15 @@
 import React, { memo } from 'react';
+import styled from 'styled-components';
 import Card from '../Generic/Card/Card'
 import { STATUS_DEAD } from '../../constants/apiData';
 
-/* todo: status unknown */
+const Container = styled.div`
+    cursor: pointer;
+`;
+
 function CharacterCard({ image, name, onClick, species, status }) {
     return (
-        <div onClick={onClick} className={'cursor-pointer'}>
+        <Container onClick={onClick}>
             <Card
                 disabled={status === STATUS_DEAD}
                 image={image}
@@ -14,7 +18,7 @@ function CharacterCard({ image, name, onClick, species, status }) {
                 width={224}
                 height={224}
             />
-        </div>
+        </Container>
     );
 };
 
