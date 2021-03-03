@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import Button from '../Form/Button/Button';
+import Button from '../Form/Button';
 import BlurryBackground from '../BlurryBackground/BlurryBackground';
 
 const Backdrop = styled.div`
