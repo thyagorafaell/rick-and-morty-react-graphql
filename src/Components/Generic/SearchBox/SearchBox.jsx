@@ -22,7 +22,7 @@ export default function SearchBox({ className, onSearch }) {
     }
 
     return (
-        <div className={`${className}`}>
+        <div className={className}>
             <form onSubmit={submitSearch}>
                 <SearchInput placeholder={'Search characters'} onChange={setValue} />
                 <SearchButton type={'submit'}>{'Search'}</SearchButton>

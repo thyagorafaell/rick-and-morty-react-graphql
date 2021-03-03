@@ -54,7 +54,7 @@ function Card({ className = '', disabled, image, title, subtitle, width, height 
     };
 
     return (
-        <Base className={`card-action ${className}`} style={cardStyleFromProps}>
+        <Base className={className} style={cardStyleFromProps}>
             <Background disabled={disabled} style={cardBackgroundStyleFromProps} />
             { showData && (
                 <Data>

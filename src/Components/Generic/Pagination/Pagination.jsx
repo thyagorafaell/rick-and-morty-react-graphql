@@ -6,6 +6,7 @@ const Container = styled.div`
     display: grid;
     gap: 48px;
     grid-gap: 48px;
+    grid-template-columns: repeat(${props => props.items}, minmax(0,1fr));
 `;
 
 function getPages(pages, currentPage) {
@@ -25,7 +26,7 @@ function Pagination({ next, onChange, page, pages, prev }) {
     });
 
     return (
-        <Container className={`grid-cols-${items.length + 2}`}>
+        <Container items={items.length + 2}>
             <PageItem disabled={prev === null} item={prev} onChange={onChange} text={'<'} />
             { items }
             <PageItem disabled={next === null} item={next} onChange={onChange} text={'>'} />
