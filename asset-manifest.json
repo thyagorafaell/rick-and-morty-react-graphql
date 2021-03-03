@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ricky-and-morty-react-graphql/static/css/main.8ebc9298.chunk.css",
-    "main.js": "/ricky-and-morty-react-graphql/static/js/main.a15f160d.chunk.js",
-    "main.js.map": "/ricky-and-morty-react-graphql/static/js/main.a15f160d.chunk.js.map",
+    "main.css": "/ricky-and-morty-react-graphql/static/css/main.657d8dcc.chunk.css",
+    "main.js": "/ricky-and-morty-react-graphql/static/js/main.4a345fb5.chunk.js",
+    "main.js.map": "/ricky-and-morty-react-graphql/static/js/main.4a345fb5.chunk.js.map",
     "runtime-main.js": "/ricky-and-morty-react-graphql/static/js/runtime-main.c410bb14.js",
     "runtime-main.js.map": "/ricky-and-morty-react-graphql/static/js/runtime-main.c410bb14.js.map",
-    "static/js/2.a6d340b5.chunk.js": "/ricky-and-morty-react-graphql/static/js/2.a6d340b5.chunk.js",
-    "static/js/2.a6d340b5.chunk.js.map": "/ricky-and-morty-react-graphql/static/js/2.a6d340b5.chunk.js.map",
+    "static/js/2.cb538469.chunk.js": "/ricky-and-morty-react-graphql/static/js/2.cb538469.chunk.js",
+    "static/js/2.cb538469.chunk.js.map": "/ricky-and-morty-react-graphql/static/js/2.cb538469.chunk.js.map",
     "index.html": "/ricky-and-morty-react-graphql/index.html",
-    "static/css/main.8ebc9298.chunk.css.map": "/ricky-and-morty-react-graphql/static/css/main.8ebc9298.chunk.css.map",
-    "static/js/2.a6d340b5.chunk.js.LICENSE.txt": "/ricky-and-morty-react-graphql/static/js/2.a6d340b5.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/ricky-and-morty-react-graphql/static/media/background.9920cf4a.png",
-    "static/media/default-card.fe571f86.png": "/ricky-and-morty-react-graphql/static/media/default-card.fe571f86.png",
-    "static/media/logo.49be5330.png": "/ricky-and-morty-react-graphql/static/media/logo.49be5330.png"
+    "static/css/main.657d8dcc.chunk.css.map": "/ricky-and-morty-react-graphql/static/css/main.657d8dcc.chunk.css.map",
+    "static/js/2.cb538469.chunk.js.LICENSE.txt": "/ricky-and-morty-react-graphql/static/js/2.cb538469.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ricky-and-morty-react-graphql/static/media/background.a7eb18c0.png",
+    "static/media/default-card.9efe1cf5.png": "/ricky-and-morty-react-graphql/static/media/default-card.9efe1cf5.png",
+    "static/media/logo.017129c9.png": "/ricky-and-morty-react-graphql/static/media/logo.017129c9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c410bb14.js",
-    "static/js/2.a6d340b5.chunk.js",
-    "static/css/main.8ebc9298.chunk.css",
-    "static/js/main.a15f160d.chunk.js"
+    "static/js/2.cb538469.chunk.js",
+    "static/css/main.657d8dcc.chunk.css",
+    "static/js/main.4a345fb5.chunk.js"
   ]
 }
