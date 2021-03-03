@@ -4,6 +4,7 @@ import Base from './Base';
 
 const Btn = styled.button`
     ${Base}
+    cursor: pointer;
 
     :focus {
         outline: transparent;
