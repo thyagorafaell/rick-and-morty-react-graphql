@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
-import Search from '../Form/Search/Search';
-import Button from '../Form/Button/Button';
-import './SearchBox.css';
+import styled from 'styled-components';
+import Search from '../Form/Search';
+import Button from '../Form/Button';
+
+const SearchInput = styled(Search)`
+    width: 196px;
+`;
+
+const SearchButton = styled(Button)`
+    margin-left: 16px;
+`;
+
+const Container = styled.div``;
 
 export default function SearchBox({ className, onSearch }) {
     const [value, setValue] = useState('');
@@ -12,10 +22,10 @@ export default function SearchBox({ className, onSearch }) {
     }
 
     return (
-        <div className={`search-box ${className}`}>
+        <div className={className}>
             <form onSubmit={submitSearch}>
-                <Search placeholder={'Search characters'} onChange={setValue} />
-                <Button type={'submit'}>{'Search'}</Button>
+                <SearchInput placeholder={'Search characters'} onChange={setValue} />
+                <SearchButton type={'submit'}>{'Search'}</SearchButton>
             </form>
         </div>
     );

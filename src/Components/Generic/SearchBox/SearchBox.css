@@ -1,7 +1,0 @@
-.search-box .form-item:not(:nth-child(1)) {
-    margin-left: 16px;
-}
-
-.search-box .form-input-search {
-    width: 196px;
-}

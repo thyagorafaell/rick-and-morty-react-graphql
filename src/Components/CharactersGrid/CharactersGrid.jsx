@@ -1,7 +1,25 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import CharacterCard from './CharacterCard';
 import CharacterModal from '../CharacterModal/CharacterModal';
-import './CharactersGrid.css';
+
+const Grid = styled.main`
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(1, minmax(0,1fr));
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+`;
 
 export default function CharactersGrid(props) {
     let [modalData, setModalData] = useState(null);
@@ -11,10 +29,10 @@ export default function CharactersGrid(props) {
     const modal = modalData && <CharacterModal onClose={closeModal} card={modalData} />
 
     return (
-        <div className={'card-grid grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}>
+        <Grid>
             { modal }
             { cards }
-        </div>
+        </Grid>
     );
 }
 
