@@ -5,7 +5,6 @@
 .pagination-item {
     color: var(--white);
     cursor: pointer;
-    font-family: var(--font-seravek);
     font-size: 20px;
     line-height: 25px;
     text-align: center;
