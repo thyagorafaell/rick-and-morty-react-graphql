@@ -1,11 +1,16 @@
-import React, { Fragment } from 'react';
 import { useQuery } from '@apollo/react-hooks';
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import CharactersGrid from '../Components/CharactersGrid/CharactersGrid';
 import Pagination from '../Components/Generic/Pagination/Pagination';
 import Loading from '../Components/Generic/Loading/Loading';
 import { CHARACTERS_NOT_FOUND_ERROR } from '../constants/errors';
 import { ERROR, NO_CHARACTERS_FOUND } from '../constants/messages';
 import { CHARACTERS } from '../constants/queries';
+
+const HomePagination = styled(Pagination)`
+	padding: 30px;
+`;
 
 export default function AppPresentation({ filter, page, setPage }) {
 	const { data, error, loading } = useQuery(CHARACTERS, {
@@ -27,9 +32,7 @@ export default function AppPresentation({ filter, page, setPage }) {
 	return data && (
 		<Fragment>
 			<CharactersGrid cards={data.characters.results} />
-			<div className={'home-pagination'}>
-				<Pagination {...data.characters.info} onChange={setPage} page={page} />
-			</div>
+			<HomePagination {...data.characters.info} onChange={setPage} page={page} />
 		</Fragment>
 	);
 }

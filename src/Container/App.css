@@ -42,31 +42,3 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-.home-pagination {
-	padding: 30px;
-}
-
-.text-black {
-	color: var(--black);
-}
-
-.text-gray {
-	color: var(--gray);
-}
-
-.text-light-gray {
-	color: var(--light-gray);
-}
-
-.text-green {
-	color: var(--green);
-}
-
-.text-white {
-	color: var(--white);
-}
-
-.text-yellow {
-	color: var(--yellow);
-}

@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import Header from '../Components/Header/Header';
 import AppPresentation from './AppPresentation';
+
+const Container = styled.div`
+	color: var(--white);
+	display: flex;
+    align-items: center;
+	flex-direction: column;
+	justify-content: center;
+`;
 
 export default function AppData() {
 	const [filter, setFilter] = useState(null);
@@ -12,11 +21,11 @@ export default function AppData() {
 	}
 
 	return (
-		<div className={'flex items-center justify-center flex-col text-white'}>
+		<Container>
 			<Header onSearch={onSearch} />
 			{ filter !== null && <AppPresentation filter={filter} page={page} setPage={setPage} /> }
-		</div>
+		</Container>
 	);
 }
 
-AppData.displayName = 'AppData';
+AppData.displayName = 'Container/AppData';

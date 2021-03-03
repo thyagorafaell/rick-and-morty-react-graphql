@@ -20,13 +20,13 @@ function getPages(pages, currentPage) {
     return Array.from({ length }, (_value, i) => start + i);
 }
 
-function Pagination({ next, onChange, page, pages, prev }) {
+function Pagination({ className, next, onChange, page, pages, prev }) {
     const items = getPages(pages, page).map(item => {
         return <PageItem key={item} current={item === page} item={item} onChange={onChange} />;
     });
 
     return (
-        <Container items={items.length + 2}>
+        <Container items={items.length + 2} className={className}>
             <PageItem disabled={prev === null} item={prev} onChange={onChange} text={'<'} />
             { items }
             <PageItem disabled={next === null} item={next} onChange={onChange} text={'>'} />
