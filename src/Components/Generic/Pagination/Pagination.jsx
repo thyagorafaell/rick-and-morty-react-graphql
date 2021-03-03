@@ -1,6 +1,12 @@
 import React, { memo } from 'react';
+import styled from 'styled-components';
 import PageItem from './PageItem';
-import './Pagination.css';
+
+const Container = styled.div`
+    display: grid;
+    gap: 48px;
+    grid-gap: 48px;
+`;
 
 function getPages(pages, currentPage) {
     const minPage = 1;
@@ -19,11 +25,11 @@ function Pagination({ next, onChange, page, pages, prev }) {
     });
 
     return (
-        <div className={`pagination grid grid-cols-${items.length + 2}`}>
+        <Container className={`grid-cols-${items.length + 2}`}>
             <PageItem disabled={prev === null} item={prev} onChange={onChange} text={'<'} />
             { items }
             <PageItem disabled={next === null} item={next} onChange={onChange} text={'>'} />
-        </div>
+        </Container>
     );
 }
 
