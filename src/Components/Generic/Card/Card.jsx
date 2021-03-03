@@ -1,7 +1,13 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
+function getDimension(value) {
+    return typeof value === 'string' ? value : (value + 'px');
+}
+
 const Base = styled.div`
+    width: ${props => props.width ? getDimension(props.width) : 'auto'};
+    height: ${props => props.height ? getDimension(props.height) : 'auto'};
     border: 2px solid var(--gray);
     border-radius: 8px;
     overflow: hidden;
@@ -15,9 +21,10 @@ const Base = styled.div`
 const Background = styled.div`
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(${props => props.image});
     background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: ${props => props.disabled ? 'var(--grayscale)' : 'inherit'};
 `;
 
@@ -45,17 +52,9 @@ const Subtitle = styled.p`
 function Card({ className = '', disabled, image, title, subtitle, width, height }) {
     const showData = title || subtitle;
 
-    const cardStyleFromProps = {
-        width, height
-    };
-
-    const cardBackgroundStyleFromProps = {
-        backgroundImage: `url(${image})`
-    };
-
     return (
-        <Base className={className} style={cardStyleFromProps}>
-            <Background disabled={disabled} style={cardBackgroundStyleFromProps} />
+        <Base width={width} height={height} className={className}>
+            <Background disabled={disabled} image={image} />
             { showData && (
                 <Data>
                     { title && <Title>{title}</Title> }

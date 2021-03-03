@@ -1,7 +1,21 @@
 import React, { memo } from 'react';
+import styled from 'styled-components';
+import Card from '../Generic/Card/Card';
 import Section from '../Generic/Section/Section';
 import { UNKNOWN, GENDER_FEMALE, GENDER_GENDERLESS, GENDER_MALE, STATUS_ALIVE, STATUS_DEAD } from '../../constants/apiData';
-import './AboutSection.css';
+
+const Content = styled.div`
+    align-items: center;
+    display: flex;
+`;
+
+const CardContainer = styled.div`
+    padding-right: 15px;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+`;
 
 function getGenderPronoum(gender) {
     let pronoum = 'He/She';
@@ -61,10 +75,12 @@ function getAboutText({ name, gender, species, status, episode }) {
 function AboutSection({ data, image }) {
     return (
         <Section title={'About'}>
-            <div className={'flex items-center'}>
-                <img className={'about-section-image md:hidden'} src={image} />
+            <Content>
+                <CardContainer>
+                    <Card image={image} width={100} height={100} />
+                </CardContainer>
                 <p>{getAboutText(data)}</p>
-            </div>
+            </Content>
         </Section>
     );
 };

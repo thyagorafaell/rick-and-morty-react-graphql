@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/react-hooks';
 import React, { Fragment, memo } from 'react';
+import styled from 'styled-components';
 import CharacterModalCard from './CharacterModalCard';
 import Modal from '../Generic/Modal/Modal';
 import Section from '../Generic/Section/Section';
@@ -7,13 +8,53 @@ import AboutSection from './AboutSection';
 import LocationSection from './LocationSection';
 import { CHARACTER } from '../../constants/queries';
 import { ERROR } from '../../constants/messages';
-import './CharacterModal.css';
+
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    height: 100%;
+`;
+
+const CardPresentationContainer = styled.div`
+    display: none;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-column: span 2/span 2;
+        grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+`;
+
+const CardPlaceholder = styled.div`
+    width: 100%;
+    height: 100%;
+    background-image: url(${props => props.image});
+    background-size: cover;
+    background-position: center;
+    filter: var(--blur) var(--darkness);
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+`;
+
+const Data = styled.div`
+    background-color: var(--black);
+    color: var(--white);
+    display: grid;
+    gap: 2em;
+    grid-column: span 5/span 5;
+    grid-template-columns: repeat(1, minmax(0,1fr));
+    padding: 3em 4em;
+    overflow: auto;
+    z-index: 10;
+
+    @media (min-width: 768px) {
+        grid-column: span 3/span 3;
+    }
+`;
 
 function CharacterModal({ card, onClose }) {
-    const placeholderStyle = {
-        backgroundImage: `url(${card.image})`
-    };
-
     const { loading, error, data } = useQuery(CHARACTER, {
 		variables: {
 			id: card.id
@@ -22,13 +63,13 @@ function CharacterModal({ card, onClose }) {
 
     return (
         <Modal onClose={onClose}>
-            <div className={'grid grid-cols-5 h-full'}>
+            <Container>
                 <Fragment>
-                    <div className={'grid hidden md:grid grid-cols-1 col-span-2'}>
-                        <div className={'character-modal-card-placeholder w-full h-full bg-center bg-cover'} style={placeholderStyle}></div>
+                    <CardPresentationContainer>
+                        <CardPlaceholder image={card.image}></CardPlaceholder>
                         <CharacterModalCard {...card} />
-                    </div>
-                    <div className={'character-modal-data-grid grid grid-cols-1 bg-black overflow-auto text-white z-10 col-span-5 md:col-span-3'}>
+                    </CardPresentationContainer>
+                    <Data>
                         { data && (
                             <Fragment>
                                 <AboutSection data={data.character} image={card.image} />
@@ -44,9 +85,9 @@ function CharacterModal({ card, onClose }) {
                             )
                         }
                         { loading && <Section title={'Loading...'} /> }
-                    </div>
+                    </Data>
                 </Fragment>
-            </div>
+            </Container>
         </Modal>
     );
 };
