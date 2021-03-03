@@ -5,10 +5,21 @@
     grid-row-end: 1;
 }
 
+.character-modal-card-placeholder {
+    filter: var(--blur) var(--darkness);
+}
+
 .character-modal-card {
-    top: calc(50% - 25vh);
     margin-left: -3vw;
     position: absolute;
+    max-height: 470px;
+    max-width: 400px;
+    width: 35%;
+    height: 65%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .character-modal-data-grid {
