@@ -39,7 +39,7 @@ const CardPlaceholder = styled.div`
 `;
 
 const Data = styled.div`
-    background-color: var(--black);
+    background-color: #000000;
     color: var(--white);
     display: grid;
     gap: 2em;
