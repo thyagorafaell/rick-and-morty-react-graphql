@@ -1,7 +1,0 @@
-.card--disabled {
-    background-blend-mode: luminosity;
-}
-
-.card--disabled .card-background {
-    filter: var(--grayscale);
-}

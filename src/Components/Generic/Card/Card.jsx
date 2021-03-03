@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import './Card.css';
 
 const Base = styled.div`
     border: 2px solid var(--gray);
@@ -19,6 +18,7 @@ const Background = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    filter: ${props => props.disabled ? 'var(--grayscale)' : 'inherit'};
 `;
 
 const Data = styled.div`
@@ -43,7 +43,6 @@ const Subtitle = styled.p`
 `;
 
 function Card({ className = '', disabled, image, title, subtitle, width, height }) {
-    const stateClass = disabled ? 'card--disabled' : 'card--enabled';
     const showData = title || subtitle;
 
     const cardStyleFromProps = {
@@ -55,8 +54,8 @@ function Card({ className = '', disabled, image, title, subtitle, width, height 
     };
 
     return (
-        <Base className={`card-action ${className} ${stateClass}`} style={cardStyleFromProps}>
-            <Background className={'card-background'} style={cardBackgroundStyleFromProps} />
+        <Base className={`card-action ${className}`} style={cardStyleFromProps}>
+            <Background disabled={disabled} style={cardBackgroundStyleFromProps} />
             { showData && (
                 <Data>
                     { title && <Title>{title}</Title> }
