@@ -45,11 +45,12 @@ const Data = styled.div`
     gap: 2em;
     grid-column: span 5/span 5;
     grid-template-columns: repeat(1, minmax(0,1fr));
-    padding: 3em 4em;
+    padding: 1em;
     overflow: auto;
     z-index: 10;
 
     @media (min-width: 768px) {
+        padding: 3em 4em;
         grid-column: span 3/span 3;
     }
 `;

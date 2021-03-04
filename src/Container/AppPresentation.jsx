@@ -9,7 +9,11 @@ import { ERROR, NO_CHARACTERS_FOUND } from '../constants/messages';
 import { CHARACTERS } from '../constants/queries';
 
 const HomePagination = styled(Pagination)`
-	padding: 30px;
+	padding: 15px 0;
+
+	@media (min-width: 414px) {
+		padding: 30px 0;
+	}
 `;
 
 export default function AppPresentation({ filter, page, setPage }) {
