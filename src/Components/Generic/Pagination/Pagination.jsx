@@ -4,9 +4,16 @@ import PageItem from './PageItem';
 
 const Container = styled.div`
     display: grid;
-    gap: 48px;
-    grid-gap: 48px;
+    gap: 18px;
     grid-template-columns: repeat(${props => props.items}, minmax(0,1fr));
+
+    @media (min-width: 414px) {
+        gap: 24px;
+    }
+
+    @media (min-width: 640px) {
+        gap: 48px;
+    }
 `;
 
 function getPages(pages, currentPage) {

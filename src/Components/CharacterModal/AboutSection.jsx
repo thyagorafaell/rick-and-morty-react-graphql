@@ -77,7 +77,7 @@ function AboutSection({ data, image }) {
         <Section title={'About'}>
             <Content>
                 <CardContainer>
-                    <Card image={image} width={100} height={100} />
+                    <Card disabled={data.status === STATUS_DEAD} image={image} width={100} height={100} />
                 </CardContainer>
                 <p>{getAboutText(data)}</p>
             </Content>
