@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Header from '../Components/Header/Header';
+import HeaderCmp from '../Components/Header/Header';
 import AppPresentation from './AppPresentation';
 
 const Container = styled.div`
@@ -9,11 +9,21 @@ const Container = styled.div`
     align-items: center;
 	flex-direction: column;
 	justify-content: center;
+    min-height: 99vh;
+`;
+
+const Header = styled(HeaderCmp)`
+	flex: 1
 `;
 
 const Footer = styled.footer`
 	font-style: italic;
-	font-size: 12px;
+	font-size: 10px;
+	text-align: center;
+
+	@media (min-width: 414px) {
+		font-size: 12px;
+	}
 `;
 
 export default function AppData() {

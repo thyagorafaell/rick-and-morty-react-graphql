@@ -23,9 +23,9 @@ const Box = styled(SearchBox)`
     }
 `;
 
-export default function Header({ onSearch }) {
+export default function Header({ className, onSearch }) {
     return (
-        <header>
+        <header className={className}>
             <Img src={logo} alt={'Rick & Morty'} />
             <Box onSearch={onSearch} />
         </header>
