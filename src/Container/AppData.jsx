@@ -11,6 +11,11 @@ const Container = styled.div`
 	justify-content: center;
 `;
 
+const Footer = styled.footer`
+	font-style: italic;
+	font-size: 12px;
+`;
+
 export default function AppData() {
 	const [filter, setFilter] = useState(null);
 	const [page, setPage] = useState(1);
@@ -24,6 +29,9 @@ export default function AppData() {
 		<Container>
 			<Header onSearch={onSearch} />
 			{ filter !== null && <AppPresentation filter={filter} page={page} setPage={setPage} /> }
+			<Footer>
+				{'Made with React, GraphQL and Styled Components by Thyago Rafael.'}
+			</Footer>
 		</Container>
 	);
 }
