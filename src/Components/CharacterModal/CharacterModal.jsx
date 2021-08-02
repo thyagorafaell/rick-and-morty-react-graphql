@@ -59,9 +59,13 @@ function CharacterModal({ card, onClose }) {
     const { loading, error, data } = useQuery(CHARACTER, {
 		variables: {
 			id: card.id
-		}
+		},
+        errorPolicy: 'all'
 	});
 
+    const showData = Boolean(data && data.character);
+    const showError = Boolean(!showData && error);
+    
     return (
         <Modal onClose={onClose}>
             <Container>
@@ -71,20 +75,18 @@ function CharacterModal({ card, onClose }) {
                         <CharacterModalCard {...card} />
                     </CardPresentationContainer>
                     <Data>
-                        { data && (
+                        { showData && (
                             <Fragment>
                                 <AboutSection data={data.character} image={card.image} />
                                 <LocationSection title={'Origin'} data={data.character.origin} />
                                 <LocationSection title={'Location'} data={data.character.location} />
                             </Fragment>
                         )}
-                        {
-                            error && (
-                                <Section title={'Error :/'}>
-                                    <p>{ERROR}</p>
-                                </Section>
-                            )
-                        }
+                        { showError && (
+                            <Section title={'Error :/'}>
+                                <p>{ERROR}</p>
+                            </Section>
+                        )}
                         { loading && <Section title={'Loading...'} /> }
                     </Data>
                 </Fragment>

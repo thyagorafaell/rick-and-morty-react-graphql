@@ -4,7 +4,7 @@ import Section from '../Generic/Section/Section';
 import People from '../../images/people.png';
 import { UNKNOWN } from '../../constants/apiData';
 
-const empytValues = {
+const emptyValues = {
     dimension: 'Unknown dimension',
     name: 'Unknown',
     type: 'Unknown planet'
@@ -37,12 +37,15 @@ const Residents = styled(Type)`
 `;
 
 function getLocationData(data) {
-    const { dimension, name, residents, type } = data;
+    const { dimension, name, residents, type } = data || {};
+
+    if (!data)
+        return emptyValues;
 
     return {
-        dimension: dimension === UNKNOWN || dimension === null ? empytValues.dimension : dimension,
-        name: name === UNKNOWN || name === null ? empytValues.name : name,
-        type: type === UNKNOWN || type === null ? empytValues.type : type,
+        dimension: dimension === UNKNOWN || dimension === null ? emptyValues.dimension : dimension,
+        name: name === UNKNOWN || name === null ? emptyValues.name : name,
+        type: type === UNKNOWN || type === null ? emptyValues.type : type,
         residents
     };
 }
