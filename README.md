@@ -8,13 +8,13 @@ The project was built using React, Apollo and Styled Components backed up by cre
 
 # To do list
 
-[x] Basic responsiveness
-[x] Search characters
-[ ] Routing
-[ ] Tests
-[ ] Improved responsiveness
-[ ] Server side rendering
-[ ] Improve performance and bundle
+- [x] Basic responsiveness
+- [x] Search characters
+- [ ] Routing
+- [ ] Tests
+- [ ] Improved responsiveness
+- [ ] Server side rendering
+- [ ] Improve performance and bundle
 
 # Building
 
