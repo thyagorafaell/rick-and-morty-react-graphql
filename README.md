@@ -10,6 +10,7 @@ The project was built using React, Apollo and Styled Components backed up by cre
 
 [x] Basic responsiveness
 [x] Search characters
+[x] Setup linting
 [ ] Routing
 [ ] Tests
 [ ] Improved responsiveness
