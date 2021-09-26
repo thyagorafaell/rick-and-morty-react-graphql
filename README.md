@@ -7,9 +7,9 @@ This is a project to search Rick and Morty characters based on a GraphQL API pro
 The project was built using React, Apollo and Styled Components backed up by create-react-app.
 
 # To do list
-
 - [x] Basic responsiveness
 - [x] Search characters
+- [x] Setup linting
 - [ ] Routing
 - [ ] Tests
 - [ ] Improved responsiveness
