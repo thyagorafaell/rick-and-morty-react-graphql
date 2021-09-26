@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import EmptyState from '../Components/EmptyState/EmptyState';
 import Header from '../Components/Header/Header';
 import AppPresentation from './AppPresentation';
 
@@ -39,7 +40,8 @@ export default function AppData() {
 		<Container>
 			<Header onSearch={onSearch} />
 			<Main>
-				<AppPresentation filter={filter} page={page} setPage={setPage} />
+				{ filter !== null && <AppPresentation filter={filter} page={page} setPage={setPage} /> }
+				{ filter === null && <EmptyState message={'Start filtering some Rick and Morty characters'} /> }
 			</Main>
 			<Footer>
 				{'Made with React, GraphQL and Styled Components by Thyago Rafael.'}
