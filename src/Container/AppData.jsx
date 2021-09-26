@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import HeaderCmp from '../Components/Header/Header';
+import Header from '../Components/Header/Header';
 import AppPresentation from './AppPresentation';
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
     min-height: 99vh;
 `;
 
-const Header = styled(HeaderCmp)`
+const Main = styled.main`
 	flex: 1
 `;
 
@@ -38,7 +38,9 @@ export default function AppData() {
 	return (
 		<Container>
 			<Header onSearch={onSearch} />
-			{ filter !== null && <AppPresentation filter={filter} page={page} setPage={setPage} /> }
+			<Main>
+				<AppPresentation filter={filter} page={page} setPage={setPage} />
+			</Main>
 			<Footer>
 				{'Made with React, GraphQL and Styled Components by Thyago Rafael.'}
 			</Footer>

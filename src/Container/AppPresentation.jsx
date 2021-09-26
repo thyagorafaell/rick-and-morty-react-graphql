@@ -29,7 +29,7 @@ export default function AppPresentation({ filter, page, setPage }) {
 	if (error) {
 		if (error.message === CHARACTERS_NOT_FOUND_ERROR)
 			return NO_CHARACTERS_FOUND;
-			
+
 		return ERROR;
 	}
 

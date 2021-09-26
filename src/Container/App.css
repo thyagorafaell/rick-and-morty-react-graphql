@@ -24,6 +24,7 @@
 	--grayscale: grayscale(1);
 	--font-family: Nunito, Arial, sans-serif;
 	--font-seravek: Seravek, var(--font-family);
+	--full-black: #000000;
 	--black: #1E1E1E;
 	--gray: #606060;
 	--light-gray: #8C8C8C;

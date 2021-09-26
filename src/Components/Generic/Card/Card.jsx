@@ -21,6 +21,7 @@ const Base = styled.div`
 const Background = styled.div`
     width: 100%;
     height: 100%;
+    background-color: var(--black);
     background-image: url(${props => props.image});
     background-position: top;
     background-repeat: no-repeat;
