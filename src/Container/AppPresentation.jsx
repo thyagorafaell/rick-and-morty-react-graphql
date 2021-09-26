@@ -7,6 +7,7 @@ import Loading from '../Components/Generic/Loading/Loading';
 import { CHARACTERS_NOT_FOUND_ERROR } from '../constants/errors';
 import { ERROR, NO_CHARACTERS_FOUND } from '../constants/messages';
 import { CHARACTERS } from '../constants/queries';
+import EmptyState, { ERROR as ERROR_STATE } from '../Components/EmptyState/EmptyState';
 
 const HomePagination = styled(Pagination)`
 	padding: 15px 0;
@@ -27,10 +28,12 @@ export default function AppPresentation({ filter, page, setPage }) {
 		return <Loading />;
 
 	if (error) {
-		if (error.message === CHARACTERS_NOT_FOUND_ERROR)
-			return NO_CHARACTERS_FOUND;
-
-		return ERROR;
+		return (
+			<EmptyState
+				type={ERROR_STATE}
+				message={error.message === CHARACTERS_NOT_FOUND_ERROR ? NO_CHARACTERS_FOUND : ERROR}
+			/>
+		);
 	}
 
 	return data && (
