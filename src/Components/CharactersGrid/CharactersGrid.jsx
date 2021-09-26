@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import CharacterCard from './CharacterCard';
 import CharacterModal from '../CharacterModal/CharacterModal';
 
-const Grid = styled.main`
+const Grid = styled.section`
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(1, minmax(0,1fr));
