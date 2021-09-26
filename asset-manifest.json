@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rick-and-morty-react-graphql/static/css/main.159d1aee.chunk.css",
-    "main.js": "/rick-and-morty-react-graphql/static/js/main.0172147b.chunk.js",
-    "main.js.map": "/rick-and-morty-react-graphql/static/js/main.0172147b.chunk.js.map",
+    "main.js": "/rick-and-morty-react-graphql/static/js/main.ce755596.chunk.js",
+    "main.js.map": "/rick-and-morty-react-graphql/static/js/main.ce755596.chunk.js.map",
     "runtime-main.js": "/rick-and-morty-react-graphql/static/js/runtime-main.d403b54c.js",
     "runtime-main.js.map": "/rick-and-morty-react-graphql/static/js/runtime-main.d403b54c.js.map",
     "static/css/2.bc922b9c.chunk.css": "/rick-and-morty-react-graphql/static/css/2.bc922b9c.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.bc922b9c.chunk.css",
     "static/js/2.d7a4cbf5.chunk.js",
     "static/css/main.159d1aee.chunk.css",
-    "static/js/main.0172147b.chunk.js"
+    "static/js/main.ce755596.chunk.js"
   ]
 }
